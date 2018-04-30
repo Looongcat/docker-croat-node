@@ -27,4 +27,4 @@ EXPOSE 8080/tcp 8081/tcp
 VOLUME ["/root/.croat"]
 
 # Entry point
-ENTRYPOINT ["/home/CROATCore/croatd", "--config-file /home/CROATCore/configs/croat.conf", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=8081"]
+ENTRYPOINT ["/home/CROATCore/croatd", "--config-file=/home/CROATCore/configs/croat.conf", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=8081"]
