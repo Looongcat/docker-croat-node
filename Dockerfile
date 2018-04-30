@@ -24,7 +24,7 @@ RUN /bin/bash -c 'chmod +x /home/CROATCore/croatd /home/CROATCore/miner /home/CR
 EXPOSE 8080/tcp 8081/tcp
 
 # Mount blockchain?
-VOLUME ["/home/.croat"]
+VOLUME ["/root/.croat"]
 
 # Entry point
-ENTRYPOINT ["/home/CROATCore/croatd", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=8081"]
+ENTRYPOINT ["/home/CROATCore/croatd", "--config-file /home/CROATCore/configs/croat.conf", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=8081"]
